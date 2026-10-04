@@ -1,9 +1,109 @@
+Practical No. 1
+
+Aim: To install WEKA, explore its major components (Explorer, Experimenter, Knowledge
+Flow), load sample datasets, and understand ARFF and CSV file formats.
+
+Software Required
+● WEKA 3.8.x or latest version
+● Windows/Linux/macOS
+● Java Runtime Environment (JRE) (if required)
+
+Components of WEKA
+When WEKA starts, the following options appear:
+1. Explorer
+Explorer is the most commonly used interface.
+Functions:
+● Load datasets
+● Data preprocessing
+
+● Classification
+● Clustering
+● Association Rule Mining
+● Attribute Selection
+● Data Visualization
+Explorer contains six tabs:
+● Preprocess
+● Classify
+● Cluster
+● Associate
+● Select Attributes
+● Visualize
+
+2. Experimenter
+Experimenter is used to compare the performance of multiple machine learning algorithms on
+one or more datasets.
+Features:
+● Batch experiments
+● Statistical comparison
+● Performance evaluation
+● Result analysis
+
+3. Knowledge Flow
+Knowledge Flow provides a graphical drag-and-drop environment.
+Features:
+● Visual workflow design
+● Data loading
+● Filtering
+● Classification
+● Evaluation
+● Visualization
+
+4. Simple CLI
+Command-line interface for executing WEKA commands manually.
+
+Procedure
+Part A: Installation of WEKA
+Step 1
+Download WEKA from the official website.
+Step 2
+Run the installer.
+Step 3
+Follow the installation wizard.
+Step 4
+Launch WEKA.
+The following window appears:
+WEKA GUI Chooser
+
+Part B: Loading Dataset
+After opening the dataset, observe:
+● Relation Name
+● Number of Instances
+● Number of Attributes
+● Attribute List
+● Class Attribute
+● Missing Values
+● Statistics
+
+Understanding ARFF Format
+ARFF stands for
+Attribute Relation File Format
+It consists of two sections.
+Header
+Contains
+● Relation name
+● Attribute names
+● Attribute types
+
+Data Section
+@data
+5.1,3.5,1.4,0.2,Iris-setosa
+4.9,3.0,1.4,0.2,Iris-setosa
+
+Understanding CSV Format
+CSV stands for
+Comma Separated Values
+Example
+SepalLength,SepalWidth,PetalLength,PetalWidth,Class
+
+
+
 **Practical No 2
 **
 Data Import and Dataset Understanding
 Import datasets (CSV/ARFF) in WEKA, examine attributes, summary statistics, and visualize
 data using preprocessing tools
 
+Part A: Import ARFF Dataset  (iris.arff)
 Step 1
 Open WEKA GUI Chooser.
 Step 2
@@ -87,8 +187,8 @@ Click Open file → select your dataset
 
 Choose a filter
 ● In the Preprocess tab, click Choose under Filter.
-● ReplaceMissingValues → Handles missing values automatically. ○
 unsupervised → attribute → ReplaceMissingValues
+● ReplaceMissingValues → Handles missing values automatically. ○
 
 ● Normalize → Scales numeric attributes to [0,1].
 ● Standardize → Converts numeric attributes to mean = 0, std. dev. = 1.
@@ -100,11 +200,22 @@ Discretize:
 Data Cleaning and Transformation
 Apply attribute selection, remove noisy data, transform datasets using filters such as
 Remove, ReplaceMissingValues, and Normalize.
+
+Import ARFF Dataset  (iris.arff)
+Step 1
+Open WEKA GUI Chooser.
+Step 2
+Click Explorer.
+Step 3
+Select the Preprocess tab.
+Step 4
+Click Open File.
+
 ● You can include/exclude attributes:
 ○ Select an attribute → click Remove (e.g., remove ID or Name if they are not
 useful).
 
-Click Choose under Filter.
+step 5:- Click Choose under Filter.
 Click the filter name (Remove) to edit options.
 Enter the attribute index.
 Click Apply.
@@ -114,9 +225,10 @@ Noisy attributes can be removed manually.
 
 The selected attribute is removed.
 
+
 Attribute Selection
 Attribute Selection helps choose the most relevant features.
-Go to Choose. Select Attribute Selection from Supervised.
+step 6  :- Go to Choose. Select Attribute Selection from Supervised.
 
 Click Apply.
 
