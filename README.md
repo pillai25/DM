@@ -566,7 +566,21 @@ Step 1: Open WEKA
 1. Launch WEKA.
 2. Click Explorer.
 
-Step 2: Load the Dataset
+Step 2: Load the Dataset ( save as customer.arff)
+% Customer Data Example for Weka
+@RELATION customer_data
+
+@ATTRIBUTE age NUMERIC
+@ATTRIBUTE income NUMERIC
+@ATTRIBUTE gender {male, female}
+@ATTRIBUTE purchased {yes, no}
+
+@DATA
+35, 50000, male, yes
+22, 24000, female, no
+45, 82000, female, yes
+31, 41000, male, no
+29, 36000, female, yes
 1. Click Open File.
 2. Select the customer dataset.
 3. The dataset summary will appear in the Preprocess tab.
